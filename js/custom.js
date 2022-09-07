@@ -70,7 +70,7 @@ jQuery(document).ready(function($) {
 $(function () {
 	$.backstretch([
 		  "/images/background/linglong.png",
-		  "/images/background/saber2.jpg",
+		  "/images/background/feixue.jpg",
 		  "/images/background/wlop.jpg"
 	], { duration: 60000, fade: 1500 });
 });
