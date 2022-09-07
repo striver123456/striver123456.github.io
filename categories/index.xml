@@ -1,7 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Categories - Category - 我的全新 Hugo 网站</title>
+        <title>Categories - Category - The home of Myqueenim</title>
         <link>https://striver123456.github.io/categories/</link>
-        <description>Categories - Category - 我的全新 Hugo 网站</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><atom:link href="https://striver123456.github.io/categories/" rel="self" type="application/rss+xml" /></channel>
+        <description>Categories - Category - The home of Myqueenim</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1220526458@qq.com (Myqueenim)</managingEditor>
+            <webMaster>1220526458@qq.com (Myqueenim)</webMaster><atom:link href="https://striver123456.github.io/categories/" rel="self" type="application/rss+xml" /></channel>
 </rss>
