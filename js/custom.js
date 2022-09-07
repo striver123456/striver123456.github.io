@@ -31,7 +31,7 @@ var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "�
 jQuery(document).ready(function($) {
     $("body").click(function(e) {
 		/* 点击频率，点击几次就换文字 */
-		var frequency = 2;
+		var frequency = 1;
 		if (a_click % frequency === 0) {
 			
 			var $i = $("<span/>").text(a[a_idx]);
@@ -70,9 +70,9 @@ jQuery(document).ready(function($) {
 $(function () {
 	$.backstretch([
 		  "/images/background/linglong.png",
-		  "/images/background/feixue.jpg",
+		  "/images/background/feixue.png",
 		  "/images/background/wlop.jpg"
-	], { duration: 60000, fade: 1500 });
+	], { duration: 30000, fade: 1500 });
 });
 
 /* 拉姆蕾姆回到顶部或底部按钮 */
@@ -88,13 +88,13 @@ $(function() {
 });
 
 /* 后置加载页面组件的背景图片 */
-$(function() {
-	/* 首页头像div加载GitHub Chart作为背景图片 */
-	$("div.home-avatar").attr('style', "background: url(https://ghchart.rshah.org/FFA500/lewky);background-repeat: no-repeat;background-position: center;background-size: auto 7.5rem;");
+// $(function() {
+// 	/* 首页头像div加载GitHub Chart作为背景图片 */
+// 	$("div.home-avatar").attr('style', "background: url(https://ghchart.rshah.org/FFA500/lewky);background-repeat: no-repeat;background-position: center;background-size: auto 7.5rem;");
 
-	/* 评论框加载背景图片 */
-	$(".v[data-class=v] .veditor").attr('style', "background-image: url(" + $cdnPrefix + "/images/common/valinebg.webp) !important;");
-});
+// 	/* 评论框加载背景图片 */
+// 	$(".v[data-class=v] .veditor").attr('style', "background-image: url(" + $cdnPrefix + "/images/common/valinebg.webp) !important;");
+// });
 
 function getCurrentDateString() {
 	var now = new Date();
@@ -129,7 +129,7 @@ window.onload = function() {
 function runtime() {
 	window.setTimeout("runtime()", 1000);
 	/* 请修改这里的起始时间 */
-    let startTime = new Date('04/24/2018 15:00:00');
+    let startTime = new Date('09/06/2022 15:00:00');
     let endTime = new Date();
     let usedTime = endTime - startTime;
     let days = Math.floor(usedTime / (24 * 3600 * 1000));

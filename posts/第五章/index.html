@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>机器学习第五章 - The home of Myqueenim</title><meta name="Description" content="The home of Myqueenim"><meta property="og:title" content="机器学习第五章" />
+<meta property="og:description" content="机器学习的核心要素，那就是通过对数据运用，依据统计或推理的方法，让计算机系统的性能得到提升。而深度学习，则是把由人工选取对象特征，变更为通过" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://striver123456.github.io/posts/%E7%AC%AC%E4%BA%94%E7%AB%A0/" /><meta property="og:image" content="https://striver123456.github.io/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-09-07T15:59:53+08:00" />
+<meta property="article:modified_time" content="2022-09-07T15:59:53+08:00" /><meta property="og:site_name" content="我的网站" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://striver123456.github.io/logo.png"/>
+
+<meta name="twitter:title" content="机器学习第五章"/>
+<meta name="twitter:description" content="机器学习的核心要素，那就是通过对数据运用，依据统计或推理的方法，让计算机系统的性能得到提升。而深度学习，则是把由人工选取对象特征，变更为通过"/>
+<meta name="application-name" content="我的网站">
+<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://striver123456.github.io/posts/%E7%AC%AC%E4%BA%94%E7%AB%A0/" /><link rel="prev" href="https://striver123456.github.io/posts/rng%E5%A4%BA%E5%86%A0%E4%B9%8B%E8%B7%AF/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "机器学习第五章",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/striver123456.github.io\/posts\/%E7%AC%AC%E4%BA%94%E7%AB%A0\/"
+        },"genre": "posts","wordcount":  2734 ,
+        "url": "https:\/\/striver123456.github.io\/posts\/%E7%AC%AC%E4%BA%94%E7%AB%A0\/","datePublished": "2022-09-07T15:59:53+08:00","dateModified": "2022-09-07T15:59:53+08:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Myqueenim"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="The home of Myqueenim"></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/" title="categories"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="The home of Myqueenim"></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="categories">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">机器学习第五章</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Myqueenim</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-09-07">2022-09-07</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2734 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>机器学习的核心要素，那就是通过对数据运用，依据统计或推理的方法，让计算机系统的性能得到提升。而深度学习，则是把由人工选取对象特征，变更为通过神经网络自己选取特征，为了提升学习的性能，神经网络的表示学习的层次较多（较深）大部分机器学习分为无监督学习和监督学习。</p>
+<p><strong>5.1学习算法</strong></p>
+<p>机器学习算法是一种能从数据中学习的算法。“学习”1997年提供了一个简洁的定义：“对于某类任务T和性能度量P，一个计算机程序被认为可以从经验E中学习是指，通过经验E改进后，他在任务T上由性能度量P衡量的性能有所提升。”</p>
+<p><strong>5.1.1任务T</strong></p>
+<p>通常机器学习任务定义为机器学习系统一个如何处理样本。样本是指我们从某些希望机器学习系统吃力的对象或事件中收集到的已经量化的特征的集合。通常会把样本表示成一个向量，其中向量的每一个元素是一个特征。</p>
+<p>一些非常常见的机器学习任务：</p>
+<p>1.分类：在这类任务中，计算机程序需要指定某些输入属于k类中的哪一类。为了完成这个任务，学习算法通常会返回一个函数。例如，f输出的是不同类别的概率分布。分类任务中有一个任务是对象识别，其中输入是图片（通常由一组像素亮度值表示），输出是表示图片物体的数字码。</p>
+<p>2.输入缺失分类：当输入向量的每个度量不被保证的时候，分类问题将会变得更有挑战性。为了解决分类任务，学习算法只需要定义一个从输入向量映射到输出类别的函数。当一些输入可能丢失时，学习算法必须学习一组函数，而不是单个分类函数。</p>
+<p>3.回归：在这类任务中，计算机程序需要对给定输入预测数值。这类任务的一个示例是预测投保人的索赔金额（用于设置保险费），或者预测证券未来的价格。这类预测也用在算法交易中。</p>
+<p>4.转录：这类任务中，机器学习系统观测一些相对非结构化表示的数据，并转录信息为离散的文本形式。谷歌街景以这种方式使用深度学习处理街道编号(Goodfellowetal.,2014d)。另一个例子是语音识别，计算机程序输入一段音频波形，输出一序列音频记录中所说的字符或单词ID的编码。</p>
+<p>5.机器翻译：在机器翻译任务中，输入是一种语言的符号序列，计算机程序必须将其转化成另一种语言的符号序列。</p>
+<p>6.结构化输出：结构化输出任务的输出是向量或者其他包含多个值的数据结构，并且构成输出的这些不同元素间具有重要关系。</p>
+<p>7.异常检测：在这类任务中，计算机程序在一组事件或对象中筛选，并标记不正常或非典型的个体。示例是信用卡欺诈检测。通过对你的购买习惯建模，信用卡公司可以检测到你的卡是否被滥用。如果窃贼窃取你的信用卡或信用卡信息，窃贼采购物品的分布通常和你的不同。当该卡发生了不正常的购买行为时，信用卡公司可以尽快冻结该卡以防欺诈。</p>
+<p>8.合成和采样：在这类任务中，机器学习程序生成一些和训练数据相似的新样本。如，在语音合成任务中，我们提供书写的句子，要求程序输出这个句子语音的音频波形。</p>
+<p>9.缺失值填补：在这类任务中，机器学习算法给定一个新样本x∈Rn，x中某些元素xi缺失。算法必须填补这些缺失值。</p>
+<p>10.去噪：</p>
+<p>11.密度估计或概率质量函数估计：</p>
+<p><strong>5.1.2性能度量P</strong></p>
+<p>为了评估机器学习算法的能力，我们必须设计其性能的定量度量。通常性能度量P是特定于系统执行的任务T而言的。</p>
+<p>对于诸如分类、缺失输入分类和转录任务，我们通常度量模型的准确率（accuracy）。准确率是指该模型输出正确结果的样本比率。我们也可以通过错误率（errorrate）得到相同的信息。错误率是指该模型输出错误结果的样本比率。</p>
+<p>通常，我们会更加关注机器学习算法在未观测数据上的性能如何，因为这将决定其在实际应用中的性能。因此，我们使用测试集（testset）数据来评估系统性能，将其与训练机器学习系统的训练集数据分开。</p>
+<p><strong>5.1.3经验E</strong></p>
+<p>根据学习过程中的不同经验，机器学习算法可以大致分类为无监督（unsupervised）算法和监督（supervised）算法。</p>
+<p>本书中的大部分学习算法可以被理解为在整个数据集（dataset）上获取经验。数据集是指很多样本组成的集合，如第5.1.1节所定义的。有时我们也将样本称为数据点（datapoint）。</p>
+<p>介绍一下Iris数据集：每个样本的特征是该植物不同部分的测量结果：萼片长度、萼片宽度、花瓣长度和花瓣宽度。个数据集也记录了每个植物属于什么品种，其中共有三个不同的品种。</p>
+<p>无监督学习算法：（unsupervisedlearningalgorithm）训练含有很多特征的数据集，然后学习出这个数据集上有用的结构性质。在深度学习中，我们通常要学习生成数据集的整个概率分布，显式地，比如密度估计，或是隐式地，比如合成或去噪。还有一些其他类型的无监督学习任务，例如聚类，将数据集分成相似样本的集合。</p>
+<p>监督学习算法：（supervisedlearning algorithm）训练含有很多特征的数据集，不过数据集中的样本都有一个标签（label）或目标（target）。例如，Iris数据集注明了每个鸢尾花卉样本属于什么品种。监督学习算法通过研究Iris数据集，学习如何根据测量结果将样本划分为三个不同品种。</p>
+<p><strong>5.1.4示例：线性回归一个简单的机器学习示例：</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="C:%5cUsers%5cstriver%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20211005125016935.png"
+        data-srcset="C:%5cUsers%5cstriver%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20211005125016935.png, C:%5cUsers%5cstriver%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20211005125016935.png 1.5x, C:%5cUsers%5cstriver%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20211005125016935.png 2x"
+        data-sizes="auto"
+        alt="C:\Users\striver\AppData\Roaming\Typora\typora-user-images\image-20211005125016935.png"
+        title="image-20211005125016935" /></p>
+<p>度量模型性能的一种方法是计算模型在测试集上的均方误差（meansquarederror）。如果yˆ(test)表示模型在测试集上的预测值，那么均方误差表示为：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="C:%5cUsers%5cstriver%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20211005125114133.png"
+        data-srcset="C:%5cUsers%5cstriver%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20211005125114133.png, C:%5cUsers%5cstriver%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20211005125114133.png 1.5x, C:%5cUsers%5cstriver%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20211005125114133.png 2x"
+        data-sizes="auto"
+        alt="C:\Users\striver\AppData\Roaming\Typora\typora-user-images\image-20211005125114133.png"
+        title="image-20211005125114133" /></p>
+<p>值得注意的是，术语线性回归（linearregression）通常用来指稍微复杂一些，附加额外参数（截距项b）的模型。在这个模型中，yˆ=w⊤x+b,</p>
+<p><strong>5.2容量、过拟合和欠拟合</strong></p>
+<p>在先前未观测到的输入上表现良好的能力被称为泛化（generalization）。</p>
+<p>训练误差：</p>
+<p>泛化误差测试误差：</p>
+<p>以下是决定机器学习算法效果是否好的因素：</p>
+<p>1.降低训练误差。</p>
+<p>2.缩小训练误差和测试误差的差距。</p>
+<p>这两个因素对应机器学习的两个主要挑战：欠拟合（underfitting）和过拟合（overfitting）。欠拟合是指模型不能在训练集上获得足够低的误差。而过拟合是指训练误差和和测试误差之间的差距太大。</p>
+<p>通过调整模型的容量（capacity），我们可以控制模型是否偏向于过拟合或者欠拟合。通俗地，模型的容量是指其拟合各种函数的能力。容量低的模型可能很难拟合训练集。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="C:%5cUsers%5cstriver%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20211005125932108.png"
+        data-srcset="C:%5cUsers%5cstriver%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20211005125932108.png, C:%5cUsers%5cstriver%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20211005125932108.png 1.5x, C:%5cUsers%5cstriver%5cAppData%5cRoaming%5cTypora%5ctypora-user-images%5cimage-20211005125932108.png 2x"
+        data-sizes="auto"
+        alt="C:\Users\striver\AppData\Roaming\Typora\typora-user-images\image-20211005125932108.png"
+        title="image-20211005125932108" /></p>
+<p><strong>5.2.1没有免费午餐定理</strong></p>
+<p><strong>5.2.2正则化</strong></p>
+<p>正则化是指我们修改学习算法，使其降低泛化误差而非训练误差。</p>
+<p><strong>5.3超参数和验证集</strong></p>
+<p>5.3.1交叉验证</p>
+<p><strong>5.4估计、偏差和方差</strong></p>
+<p>5.4.1点估计</p>
+<p>5.4.2偏差</p>
+<p>5.4.3方差和标准差</p>
+<p>5.4.4权衡偏差和方差以最小化均方误差</p>
+<p><strong>5.5最大似然估计</strong></p>
+<p>5.5.1条件对数似然和均方误差</p>
+<p>5.5.2最大似然的性质</p>
+<p>5.6贝叶斯统计</p>
+<p>5.6.1最大后验(MAP)估计</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-09-07</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://striver123456.github.io/posts/%E7%AC%AC%E4%BA%94%E7%AB%A0/" data-title="机器学习第五章" data-via="xxxx"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://striver123456.github.io/posts/%E7%AC%AC%E4%BA%94%E7%AB%A0/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://striver123456.github.io/posts/%E7%AC%AC%E4%BA%94%E7%AB%A0/" data-title="机器学习第五章"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://striver123456.github.io/posts/%E7%AC%AC%E4%BA%94%E7%AB%A0/" data-title="机器学习第五章"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://striver123456.github.io/posts/%E7%AC%AC%E4%BA%94%E7%AB%A0/" data-title="机器学习第五章"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/rng%E5%A4%BA%E5%86%A0%E4%B9%8B%E8%B7%AF/" class="prev" rel="prev" title="RNG加油"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>RNG加油</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container">
+<div class="footer-line">
+	<span id="run-time"></span>
+</div><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.102.3">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Myqueenim</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script><script type="text/javascript" src="/js/custom.js"></script></body>
+</html>
